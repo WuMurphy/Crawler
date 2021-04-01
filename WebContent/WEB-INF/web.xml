@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>Web</display-name>
+   <!-- 配置 Register-->
+  <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <servlet-class>com.Cai.mysqltest.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/register_do</url-pattern>
+  </servlet-mapping>
+  <!-- 配置 Login-->
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>com.Cai.mysqltest.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/login_do</url-pattern>
+  </servlet-mapping>
+</web-app>
+ 
+  
