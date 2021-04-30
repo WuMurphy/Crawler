@@ -199,8 +199,8 @@ public class SmallTest {
     }
 
     public static void main(String[] args) throws Exception {
-        String keyword = "苹果手机";
-        jdCrawlerDB(keyword);
+        String keyword = "三星手机";
+//        jdCrawlerDB(keyword);
 //        tbCrawlerDB(keyword);
         mmbCrawlerDB(keyword);
     }

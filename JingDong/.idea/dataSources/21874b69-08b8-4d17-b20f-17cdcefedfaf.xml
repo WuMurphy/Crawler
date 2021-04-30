@@ -970,148 +970,353 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="283" parent="2" name="jd_item">
+    <table id="283" parent="2" name="apple_item">
+      <Comment>苹果商品表</Comment>
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <table id="284" parent="2" name="else_item">
+      <Comment>其他商品表</Comment>
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <table id="285" parent="2" name="huawei_item">
+      <Comment>华为商品表</Comment>
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <table id="286" parent="2" name="jd_item">
       <Comment>京东商品表</Comment>
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="284" parent="2" name="mmb_item">
+    <table id="287" parent="2" name="mi_item">
+      <Comment>小米商品表</Comment>
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <table id="288" parent="2" name="mmb_item">
       <Comment>慢慢买商品表</Comment>
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="285" parent="2" name="tb_item">
+    <table id="289" parent="2" name="samsung_item">
+      <Comment>三星商品表</Comment>
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <table id="290" parent="2" name="tb_item">
       <Comment>淘宝商品表</Comment>
       <Collation>utf8_general_ci</Collation>
     </table>
-    <column id="286" parent="283" name="id">
+    <column id="291" parent="283" name="id">
       <Position>1</Position>
       <Comment>主键id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="287" parent="283" name="sku">
-      <Position>2</Position>
-      <Comment>商品最小品类单元id</Comment>
-      <DataType>bigint|0s</DataType>
-    </column>
-    <column id="288" parent="283" name="brand">
-      <Position>3</Position>
-      <Comment>商品集合id</Comment>
-      <DataType>varchar(10)|0s</DataType>
-    </column>
-    <column id="289" parent="283" name="title">
-      <Position>4</Position>
-      <Comment>商品标题</Comment>
-      <DataType>varchar(200)|0s</DataType>
-    </column>
-    <column id="290" parent="283" name="price">
-      <Position>5</Position>
-      <Comment>商品价格</Comment>
-      <DataType>varchar(20)|0s</DataType>
-    </column>
-    <column id="291" parent="283" name="pic">
-      <Position>6</Position>
-      <Comment>商品图片</Comment>
-      <DataType>varchar(200)|0s</DataType>
-    </column>
-    <column id="292" parent="283" name="url">
-      <Position>7</Position>
-      <Comment>商品详情地址</Comment>
-      <DataType>varchar(200)|0s</DataType>
-    </column>
-    <index id="293" parent="283" name="sku">
-      <ColNames>sku</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="294" parent="283" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="295" parent="284" name="id">
-      <Position>1</Position>
-      <Comment>主键id</Comment>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="296" parent="284" name="mall">
+    <column id="292" parent="283" name="mall">
       <Position>2</Position>
       <Comment>商城id</Comment>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="297" parent="284" name="brand">
+    <column id="293" parent="283" name="title">
       <Position>3</Position>
-      <Comment>商品集合id</Comment>
-      <DataType>varchar(10)|0s</DataType>
-    </column>
-    <column id="298" parent="284" name="title">
-      <Position>4</Position>
       <Comment>商品标题</Comment>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="299" parent="284" name="price">
-      <Position>5</Position>
+    <column id="294" parent="283" name="price">
+      <Position>4</Position>
       <Comment>商品价格</Comment>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="300" parent="284" name="pic">
-      <Position>6</Position>
+    <column id="295" parent="283" name="pic">
+      <Position>5</Position>
       <Comment>商品图片</Comment>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="301" parent="284" name="url">
-      <Position>7</Position>
+    <column id="296" parent="283" name="url">
+      <Position>6</Position>
       <Comment>商品详情地址</Comment>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <key id="302" parent="284" name="PRIMARY">
+    <key id="297" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="303" parent="285" name="id">
+    <column id="298" parent="284" name="id">
       <Position>1</Position>
       <Comment>主键id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="304" parent="285" name="sku">
+    <column id="299" parent="284" name="mall">
+      <Position>2</Position>
+      <Comment>商城id</Comment>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="300" parent="284" name="title">
+      <Position>3</Position>
+      <Comment>商品标题</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="301" parent="284" name="price">
+      <Position>4</Position>
+      <Comment>商品价格</Comment>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="302" parent="284" name="pic">
+      <Position>5</Position>
+      <Comment>商品图片</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="303" parent="284" name="url">
+      <Position>6</Position>
+      <Comment>商品详情地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <key id="304" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="305" parent="285" name="id">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="306" parent="285" name="mall">
+      <Position>2</Position>
+      <Comment>商城id</Comment>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="307" parent="285" name="title">
+      <Position>3</Position>
+      <Comment>商品标题</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="308" parent="285" name="price">
+      <Position>4</Position>
+      <Comment>商品价格</Comment>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="309" parent="285" name="pic">
+      <Position>5</Position>
+      <Comment>商品图片</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="310" parent="285" name="url">
+      <Position>6</Position>
+      <Comment>商品详情地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <key id="311" parent="285" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="312" parent="286" name="id">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="313" parent="286" name="sku">
       <Position>2</Position>
       <Comment>商品最小品类单元id</Comment>
       <DataType>bigint|0s</DataType>
     </column>
-    <column id="305" parent="285" name="brand">
+    <column id="314" parent="286" name="brand">
       <Position>3</Position>
       <Comment>商品集合id</Comment>
       <DataType>varchar(10)|0s</DataType>
     </column>
-    <column id="306" parent="285" name="title">
+    <column id="315" parent="286" name="title">
       <Position>4</Position>
       <Comment>商品标题</Comment>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="307" parent="285" name="price">
+    <column id="316" parent="286" name="price">
       <Position>5</Position>
       <Comment>商品价格</Comment>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="308" parent="285" name="pic">
+    <column id="317" parent="286" name="pic">
       <Position>6</Position>
       <Comment>商品图片</Comment>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="309" parent="285" name="url">
+    <column id="318" parent="286" name="url">
       <Position>7</Position>
       <Comment>商品详情地址</Comment>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <index id="310" parent="285" name="sku">
+    <index id="319" parent="286" name="sku">
       <ColNames>sku</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="311" parent="285" name="PRIMARY">
+    <key id="320" parent="286" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="321" parent="287" name="id">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="322" parent="287" name="mall">
+      <Position>2</Position>
+      <Comment>商城id</Comment>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="323" parent="287" name="title">
+      <Position>3</Position>
+      <Comment>商品标题</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="324" parent="287" name="price">
+      <Position>4</Position>
+      <Comment>商品价格</Comment>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="325" parent="287" name="pic">
+      <Position>5</Position>
+      <Comment>商品图片</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="326" parent="287" name="url">
+      <Position>6</Position>
+      <Comment>商品详情地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <key id="327" parent="287" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="328" parent="288" name="id">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="329" parent="288" name="mall">
+      <Position>2</Position>
+      <Comment>商城id</Comment>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="330" parent="288" name="brand">
+      <Position>3</Position>
+      <Comment>商品集合id</Comment>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="331" parent="288" name="title">
+      <Position>4</Position>
+      <Comment>商品标题</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="332" parent="288" name="price">
+      <Position>5</Position>
+      <Comment>商品价格</Comment>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="333" parent="288" name="pic">
+      <Position>6</Position>
+      <Comment>商品图片</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="334" parent="288" name="url">
+      <Position>7</Position>
+      <Comment>商品详情地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <key id="335" parent="288" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="336" parent="289" name="id">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="337" parent="289" name="mall">
+      <Position>2</Position>
+      <Comment>商城id</Comment>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="338" parent="289" name="title">
+      <Position>3</Position>
+      <Comment>商品标题</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="339" parent="289" name="price">
+      <Position>4</Position>
+      <Comment>商品价格</Comment>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="340" parent="289" name="pic">
+      <Position>5</Position>
+      <Comment>商品图片</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="341" parent="289" name="url">
+      <Position>6</Position>
+      <Comment>商品详情地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <key id="342" parent="289" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="343" parent="290" name="id">
+      <Position>1</Position>
+      <Comment>主键id</Comment>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="344" parent="290" name="sku">
+      <Position>2</Position>
+      <Comment>商品最小品类单元id</Comment>
+      <DataType>bigint|0s</DataType>
+    </column>
+    <column id="345" parent="290" name="brand">
+      <Position>3</Position>
+      <Comment>商品集合id</Comment>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="346" parent="290" name="title">
+      <Position>4</Position>
+      <Comment>商品标题</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="347" parent="290" name="price">
+      <Position>5</Position>
+      <Comment>商品价格</Comment>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="348" parent="290" name="pic">
+      <Position>6</Position>
+      <Comment>商品图片</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="349" parent="290" name="url">
+      <Position>7</Position>
+      <Comment>商品详情地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <index id="350" parent="290" name="sku">
+      <ColNames>sku</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="351" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

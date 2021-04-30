@@ -27,10 +27,18 @@ public class HtmlParseUntil {
     public static void parseJD(ArrayList<Content> goodsList, String keyword, String page) throws Exception {
         //获取请求 https://search.jd.com/Search?keyword=java
         //前提需要联网！！
-        String url = "https://search.jd.com/Search?keyword="+keyword+"%E6%89%8B%E6%9C%BA&enc=utf-8&psort=3&page="+page;
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        String url = "https://search.jd.com/Search?keyword="+keyword+"&enc=utf-8&psort=3&page="+page;
+        HttpGet get = new HttpGet(url);
+
+        get.setHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36");
         //解析网页 jsoup 返回document 这个document就是浏览器JS的document对象
         //所有在js中的方法在这里都可以使用
-        Document document = Jsoup.parse(new URL(url), 60000);
+        CloseableHttpResponse response = httpClient.execute(get);
+        HttpEntity entity = response.getEntity();
+        String html = EntityUtils.toString(entity, "utf-8");
+        Document document = Jsoup.parse(html);
+//        Document document = Jsoup.parse(new URL(url), 60000);
         Element element = document.getElementById("J_goodsList");
 //        System.out.println(element.html());
         Elements elements = element.getElementsByTag("li");
@@ -129,10 +137,17 @@ public class HtmlParseUntil {
     public static void parseManManBuy(ArrayList<Content> goodsList, String keyword, String page) throws Exception {
         //获取请求 https://s.manmanbuy.com/Default.aspx?key=手机&searchmode=1&ppid=0&smallclass=57&orderby=score&price1=659&price2=0&f1=0&f2=0&f3=0&f4=0&f5=0&f6=0
         //前提需要联网！！
+        CloseableHttpClient httpClient = HttpClients.createDefault();
         String url = "http://s.manmanbuy.com/Default.aspx?key="+word2GBK(keyword)+"&PageID="+page;
+        HttpGet get = new HttpGet(url);
+
+        get.setHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36");
         //解析网页 jsoup 返回document 这个document就是浏览器JS的document对象
         //所有在js中的方法在这里都可以使用
-        Document document = Jsoup.parse(new URL(url), 60000);
+        CloseableHttpResponse response = httpClient.execute(get);
+        HttpEntity entity = response.getEntity();
+        String html = EntityUtils.toString(entity, "utf-8");
+        Document document = Jsoup.parse(html);
         Element element = document.getElementsByClass("div1100").get(0);
 //        System.out.println(element.html());
         Elements elements = element.getElementsByTag("div");
