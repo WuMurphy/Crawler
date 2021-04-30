@@ -1,11 +1,6 @@
 package com.Cai.mysqltest;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
+import java.sql.*;
 public class MysqlTool {
 	static Connection con;
 	static Statement sql;
@@ -73,7 +68,7 @@ public class MysqlTool {
 			sql=con.createStatement();
 			res=sql.executeQuery("select * from register");
 			while(res.next()) {
-				if(name.equals(res.getString("username"))) {
+				if(name.equals(res.getString("username"))) {					
 					if(password.equals(res.getString("password"))) {
 						System.out.println("login successfully");
 						return true;
@@ -94,11 +89,62 @@ public class MysqlTool {
 			return false;
 		}
 	}
-	public static void main(String[] args)  {
+	public boolean seekusername (String name) {
+		MysqlTool c=new MysqlTool();
+		con=c.Connection();
+		try {
+			sql=con.createStatement();
+			res=sql.executeQuery("select * from register");
+			while(res.next()) {
+				if(name.equals(res.getString("username"))) {					
+						System.out.println("User name available");
+						return true;
+					}
+						
+					else {
+						System.out.println("User name is not available！");
+						return false;
+					}
+						
+				
+			}
+			System.out.println("NO user");
+			return false;
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	public static void search()  {
+		MysqlTool c=new MysqlTool();
+		con=c.Connection();
+		try {
+			String sea = "select * from register where username like '%yao%'";
+			sql=con.createStatement();
+			res=sql.executeQuery(sea);
+			int id;
+			String password,name;
+	      System.out.println("id\t username\t password");
+	      while(res.next()){
+	        id=res.getInt("id");
+	        name=res.getString(2);
+	        password=res.getString("password");
+	        System.out.println(id+"\t"+name+"\t"+password);//输出查询结果
+	      }
+
+		}catch (SQLException e) {
+		      // TODO Auto-generated catch block
+		      e.printStackTrace();
+		    }
+		
+	}
+	public static void main(String[] args) {
 		MysqlTool c=new MysqlTool();
 		c.read();
-		c.write("cai","12356");
+		//c.write("cai","12356");
 		c.seek("csdn", "123");
+		search();
 
 	}
 

@@ -45,11 +45,12 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		String name=request.getParameter("id");//获得html界面的信息
 		String password=request.getParameter("password");
 		MysqlTool logining=new MysqlTool();
-		
-		logining.write(name, password);//使用上面的第二步，写入数据库
-		
+		boolean flag= logining.seekusername(name);
 		PrintWriter printwriter=response.getWriter();//浏览器界面显示
+		if(flag) {
+		logining.write(name, password);//使用上面的第二步，写入数据库
 		printwriter.write("Register successfully");//成功
+		}
 	}
 
 

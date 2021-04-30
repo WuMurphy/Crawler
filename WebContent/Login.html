@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
+<script type="text/javascript">
+	$(function()){
+		$("input.submit").click(function()){
+			var flag =$(this).attr(flag);
+			location.href= "http://localhost:8080/CollectionServlet?action=addItem&flag="+ flag;
+		}
+	}
+</script>
 <style>
         body {
             margin: 0;
@@ -70,13 +78,13 @@
         }
         .dont-have-account{
          	position: absolute;
-         	bottom: 100px;
-        	right: 380px;
+         	bottom: 80px;
+        	right: 180px;
         	width: 400px;
         	height: 30px;
          	font-size: 14px;
             text-align: bottom;
-            color: #f4f4f480;
+            color: yellow;
             margin: 20px 0;
         }
         .dont-have-account a {
@@ -91,7 +99,7 @@
         <h1>Login</h1>
         <input type="text" name="id" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit" name="" value="Login">
+        <input class="submit" type="submit" name="submit" flag="${true}" value="Login">
         
     </form>
     <div class="dont-have-account">

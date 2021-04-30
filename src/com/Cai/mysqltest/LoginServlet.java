@@ -54,6 +54,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		else {
 			printwriter.write("Failed login");//Ê§°Ü
 		}
+		request.getSession().setAttribute("flag",flag);
 	}
 
 
