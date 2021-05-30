@@ -200,7 +200,7 @@ public class SmallTest {
 
     public static void main(String[] args) throws Exception {
         String keyword = "三星手机";
-//        jdCrawlerDB(keyword);
+        jdCrawlerDB(keyword);
 //        tbCrawlerDB(keyword);
         mmbCrawlerDB(keyword);
     }
