@@ -3,7 +3,7 @@
 <br>
 
 - **About the crawler:**<br><br>
-The initial crawler programme. (mainly focus on JD and MMB, the database url need to be changed according to the developer's database url)<br><br>
+The initial crawler programme. (mainly focus on JD and MMB, the database url in DatabaseConnector.java need to be changed according to the developer's database url)<br><br>
 This is an individual part of the Group29 HuoBiBi Web App project. It is used to get enough product elements that are added into the product database.<br><br>
 The main method is in the class file called SmallTest. If you set the database correctly, it will get the information from JingDong and ManManBuy shopping mall depends on the keyword that you typed in.(please ignore tbCrawler(), it is only used for testing bypassing the anticrawler.)<br><br><br>
 - **About the database:**<br><br>
